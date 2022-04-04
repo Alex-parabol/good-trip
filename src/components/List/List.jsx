@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PlaceDetails from "./../PlaceDetails/PlaceDetails";
 import {
   CircularProgress,
   Grid,
@@ -15,6 +16,23 @@ export default function List() {
   const [type, setType] = useState("restaurants");
   const [rating, setRating] = useState("");
 
+  const places = [
+    {
+      name: "Potemkin",
+    },
+    {
+      name: "Paniagua",
+    },
+    {
+      name: "Imprenta",
+    },
+    {
+      name: "Pippers",
+    },
+    {
+      name: "Casa de cris",
+    },
+  ];
   return (
     <div className={classes.container}>
       <Typography variant="h4">
@@ -37,6 +55,14 @@ export default function List() {
           <MenuItem value={4.5}>Above 4.5</MenuItem>
         </Select>
       </FormControl>
+      <Grid container spacing={3} className={classes.list}>
+        {/* care using index as they key holder because if we needed to delete an item we would be in trouble. */}
+        {places?.map((place, i) => (
+          <Grid item key={i} xs={12}>
+            <PlaceDetails place={place} />
+          </Grid>
+        ))}
+      </Grid>
     </div>
   );
 }
