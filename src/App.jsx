@@ -2,12 +2,12 @@ import { Fragment, useEffect, useState } from "react";
 import Header from "./components/Header/Header";
 import List from "./components/List/List";
 import Map from "./components/Map/Map";
-/* import PlaceDetails from "./components/PlaceDetails/PlaceDetails"; */
+/* import PlaceDetails gifrom "./components/PlaceDetails/PlaceDetails"; */
 import { getPlacesData } from "./api";
 import { CssBaseline, Grid } from "@material-ui/core";
 
 function App() {
-  //restaurants we obtain from the api
+  //restaurants we obtain from the api tryout 2
   const [places, setPlaces] = useState([]);
 
   //coordinates of the places we are looking for
