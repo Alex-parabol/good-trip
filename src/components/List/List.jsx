@@ -11,12 +11,12 @@ import {
 } from "@material-ui/core";
 import useStyles from "./ListStyles";
 
-export default function List() {
+export default function List({places}) {
   const classes = useStyles();
   const [type, setType] = useState("restaurants");
   const [rating, setRating] = useState("");
 
-  const places = [
+  /* const places = [
     {
       name: "Potemkin",
     },
@@ -32,7 +32,7 @@ export default function List() {
     {
       name: "Casa de cris",
     },
-  ];
+  ]; */
   return (
     <div className={classes.container}>
       <Typography variant="h4">
