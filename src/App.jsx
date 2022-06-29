@@ -7,7 +7,7 @@ import { getPlacesData } from "./api";
 import { CssBaseline, Grid } from "@material-ui/core";
 
 function App() {
-  //restaurants we obtain from the api tryout 2
+  //restaurants we obtain from the api, tryout 2
   const [places, setPlaces] = useState([]);
 
   //coordinates of the places we are looking for
