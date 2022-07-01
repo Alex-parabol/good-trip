@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const URL = 'https://travel-advisor.p.rapidapi.com/restaurants/list-in-boundary'
 
-
+// 1:05:00 is the time of the video to keep going while the api resets.
 export const getPlacesData = async (sw, ne) => {
   try {
     const { data: { data } } = await axios.get(URL, {
